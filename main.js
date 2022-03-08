@@ -55,3 +55,10 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+// make function that sorts coffee id by descending order
+/*
+function to search through the coffees by name,
+display only the coffees that match
+the provided search term (You will need to add an input field to the existing form for this)*/
+
+// update display: show coffee printout of what user types upon selection
