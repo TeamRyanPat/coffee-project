@@ -61,4 +61,13 @@ function to search through the coffees by name,
 display only the coffees that match
 the provided search term (You will need to add an input field to the existing form for this)*/
 
+
+
+
 // update display: show coffee printout of what user types upon selection
+var coffeeName = function(){
+    // console.log("hi")
+};
+
+var nameInput = document.querySelector('#sort-name');
+nameInput.addEventListener('keyup',coffeeName);
