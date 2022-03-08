@@ -21,9 +21,12 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    //Txt is checking where you are typing
+    var txt = document.querySelector('#sort-name');
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        // txt.value check what the user is typing
+        if (coffee.roast === selectedRoast && coffee.name.includes(txt.value)) {
             filteredCoffees.push(coffee);
         }
     });
@@ -65,9 +68,27 @@ the provided search term (You will need to add an input field to the existing fo
 
 
 // update display: show coffee printout of what user types upon selection
-var coffeeName = function(){
-    // console.log("hi")
-};
+// var coffeeName = function(){
+//     var txt = document.querySelector('#sort-name');
+//     var filtercof =[]
+//     filtercof = txt.value
+//     tbody.innerHTML = renderCoffees(txt.value);
+//     console.log(txt.value)
+// };
+//
+// var testfilter =function (){
+//     var table = document.querySelector('#coffeetable');
+//     var tr = table.getElementsByTagName("tr");
+//     var td, textvaule;
+//     for (var i = 0; i <tr.length; i++){
+//         td =tr[i].getElementsByTagName("td")[0];
+//         if (td){
+//             textvaule= td.textContent || td.innerText;
+//
+//         }
+//     }
+// }
 
 var nameInput = document.querySelector('#sort-name');
-nameInput.addEventListener('keyup',coffeeName);
+nameInput.addEventListener('keyup', updateCoffees);
+// nameInput.addEventListener('keyup', testfilter);
