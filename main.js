@@ -23,8 +23,6 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
-
-    }
 }
 
 function updateCoffees(e) {
