@@ -1,14 +1,17 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    /*    html += '<td>' + coffee.id + '</td>';*/
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
 
     return html;
 }
+/*    if (element.hasAttribute("coffee.name")) {
+        element.setAttribute("coffee.name", "<div>");*/
+
 
 // COMPLETED pat 1st tsk: make function that sorts coffee id by ascending order
 /*solution: change the start of the variable from 10 to 0, define condition
@@ -20,6 +23,8 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
+
+    }
 }
 
 function updateCoffees(e) {
