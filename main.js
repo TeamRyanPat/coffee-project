@@ -10,9 +10,13 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// pat 1st tsk: make function that sorts coffee id by ascending order
+/*solution: change the start of the variable from 10 to 0, define condition
+for the loop, say action (increment) */
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -55,10 +59,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-// make function that sorts coffee id by descending order
-/*
-function to search through the coffees by name,
-display only the coffees that match
-the provided search term (You will need to add an input field to the existing form for this)*/
 
-// update display: show coffee printout of what user types upon selection
+
+
+
