@@ -10,7 +10,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-// pat 1st tsk: make function that sorts coffee id by ascending order
+// COMPLETED pat 1st tsk: make function that sorts coffee id by ascending order
 /*solution: change the start of the variable from 10 to 0, define condition
 for the loop, say action (increment) */
 
