@@ -7,3 +7,11 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+/*coffee.id {
+    display:none;*/
+
+/*
+pat to do 3: refactor the code so that each coffee is displayed in a div
+           that contains a heading displaying the coffee name, and the type of
+roast in a paragraph.*/

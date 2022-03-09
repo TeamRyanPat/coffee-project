@@ -1,10 +1,9 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
+
     var html = '<div class="coffee">';
-    // html += '<div>' + coffee.id + '</div>';
     html += '<p>' + coffee.name +" "+ coffee.roast + '</p>'
-    // html += '<div>' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -12,7 +11,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -62,17 +61,8 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-// make function that sorts coffee id by descending order
-/*
-function to search through the coffees by name,
-display only the coffees that match
-the provided search term (You will need to add an input field to the existing form for this)*/
 
-
-
-
-// update display: show coffee printout of what user types upon selection
 
 var nameInput = document.querySelector('#sort-name');
 nameInput.addEventListener('keyup', updateCoffees);
-// nameInput.addEventListener('keyup', testfilter);
+
