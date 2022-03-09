@@ -19,15 +19,15 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value.toLowerCase();
     //Txt is checking where you are typing
     var txt = document.querySelector('#sort-name'); //same as getElementByID
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         // txt.value check what the user is typing
-        if (coffee.roast === selectedRoast && coffee.name.includes(txt.value)) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(txt.value.toLowerCase()) ||coffee.roast === selectedRoast && coffee.roast.toLowerCase().includes(txt.value.toLowerCase()) ) {
             filteredCoffees.push(coffee);
-        }else if (coffee.all === selectedRoast && coffee.name.includes(txt.value)){
+        }else if (coffee.all === selectedRoast && coffee.name.toLowerCase().includes(txt.value.toLowerCase())||coffee.all === selectedRoast && coffee.roast.toLowerCase().includes(txt.value.toLowerCase()) ){
             filteredCoffees.push(coffee)
         }
         console.log(txt.value);
