@@ -11,34 +11,22 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <label for="sort-name"></label>
+        <input type="name" id="sort-name" name="sort-name">
         <input id="submit" type="submit" />
     </form>
-<!--//add a div around each new coffee and give ability to create/type out coffee//-->
-<!--
-    type of roast in the paragraph
--->
-<!--    each div has a heading displaying the coffee name-->
-<!--
-    *COMPLETED pat2: don't display id's
--->
 
-    <table>
-      <!--  <thead>
-            <tr>
-                <th style = "display:none">ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>-->
+    <table id="coffeetable">
+
         <tbody id="coffees"></tbody>
     </table>
 <!--ability to add coffee, which allows user to choose rows and name of coffee-->
     <script src="main.js"></script>
-
 
 </body>
 </html>
