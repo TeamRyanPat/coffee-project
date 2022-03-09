@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<p>' + coffee.name +" "+ coffee.roast + '</p>'
+    // html += '<div>' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -22,7 +22,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     //Txt is checking where you are typing
-    var txt = document.querySelector('#sort-name');
+    var txt = document.querySelector('#sort-name'); //same as getElementByID
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         // txt.value check what the user is typing
@@ -31,7 +31,9 @@ function updateCoffees(e) {
         }else if (coffee.all === selectedRoast && coffee.name.includes(txt.value)){
             filteredCoffees.push(coffee)
         }
+        console.log(txt.value);
     });
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -70,26 +72,6 @@ the provided search term (You will need to add an input field to the existing fo
 
 
 // update display: show coffee printout of what user types upon selection
-// var coffeeName = function(){
-//     var txt = document.querySelector('#sort-name');
-//     var filtercof =[]
-//     filtercof = txt.value
-//     tbody.innerHTML = renderCoffees(txt.value);
-//     console.log(txt.value)
-// };
-//
-// var testfilter =function (){
-//     var table = document.querySelector('#coffeetable');
-//     var tr = table.getElementsByTagName("tr");
-//     var td, textvaule;
-//     for (var i = 0; i <tr.length; i++){
-//         td =tr[i].getElementsByTagName("td")[0];
-//         if (td){
-//             textvaule= td.textContent || td.innerText;
-//
-//         }
-//     }
-// }
 
 var nameInput = document.querySelector('#sort-name');
 nameInput.addEventListener('keyup', updateCoffees);
