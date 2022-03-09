@@ -7,7 +7,12 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-
+.color{
+    background-color: lightcoral;
+}
+#coffees{
+    background-color: white;
+}
 /*coffee.id {
     display:none;*/
 

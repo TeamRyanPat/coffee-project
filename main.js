@@ -1,11 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-
     var html = '<div class="coffee">';
-    html += '<p>' + coffee.name +" "+ coffee.roast + '</p>'
+    html += '<p>' + coffee.roast +" "+ coffee.name + '</p>'
     html += '</div>';
-
     return html;
 }
 
@@ -55,27 +53,26 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('.roast-selection');
+var submitButton = document.querySelector('#roast-selection');
+var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('mouseout', updateCoffees);
 
 
 var nameInput = document.querySelector('#sort-name');
 nameInput.addEventListener('keyup', updateCoffees);
 
-function addnewcoffe(){
+function addnewcoffee(){
 var newcoffee =[
     {id: coffees.length , name: document.querySelector('#newCoffee').value, roast: document.querySelector('#new-roast-selection').value,
         all:'all'}
 ]
 coffees.push(newcoffee[0]);
-    console.log(coffees)
 }
 var sendcoffee =document.querySelector('#send-coffee')
-sendcoffee.addEventListener('click', addnewcoffe);
+sendcoffee.addEventListener('click', addnewcoffee);
 sendcoffee.addEventListener('click', updateCoffees);
-console.log(coffees)
+
 

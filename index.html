@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="color">
 <h1>Coffee!</h1>
 
 <form>
@@ -24,8 +24,9 @@
     </select>
     <label for="sort-name"></label>
     <input type="name" id="sort-name" name="sort-name">
-    <button id="submit" type="button" class="rounded-pill">rost cobbee</button>
+
 </form>
+<br>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add Cobbee plz or your family get it?
@@ -40,7 +41,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-               Name of Coffee: <input type="name" name="newCoffee" id="newCoffee"><br>
+               Name of Coffee: <input type="name" name="newCoffee" id="newCoffee"><br><br>
                 Type of Roast:<label for="new-roast-selection"></label>
                 <select id="new-roast-selection">
                     <option>light</option>
@@ -50,7 +51,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="send-coffee">Family cobbee needds</button>
+                <button type="button" class="btn btn-primary" id="send-coffee" data-bs-dismiss="modal">Family cobbee needds</button>
             </div>
         </div>
     </div>
@@ -58,7 +59,7 @@
 
 <table id="coffeetable">
 
-    <tbody id="coffees"></tbody>
+    <tbody id="coffees" ></tbody>
 </table>
 <!--ability to add coffee, which allows user to choose rows and name of coffee-->
 <script src="main.js"></script>
