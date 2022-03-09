@@ -30,7 +30,7 @@ function updateCoffees(e) {
         }else if (coffee.all === selectedRoast && coffee.name.toLowerCase().includes(txt.value.toLowerCase())||coffee.all === selectedRoast && coffee.roast.toLowerCase().includes(txt.value.toLowerCase()) ){
             filteredCoffees.push(coffee)
         }
-        console.log(txt.value);
+
     });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -56,7 +56,7 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var roastSelection = document.querySelector('.roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
@@ -65,4 +65,17 @@ submitButton.addEventListener('click', updateCoffees);
 
 var nameInput = document.querySelector('#sort-name');
 nameInput.addEventListener('keyup', updateCoffees);
+
+function addnewcoffe(){
+var newcoffee =[
+    {id: coffees.length , name: document.querySelector('#newCoffee').value, roast: document.querySelector('#new-roast-selection').value,
+        all:'all'}
+]
+coffees.push(newcoffee[0]);
+    console.log(coffees)
+}
+var sendcoffee =document.querySelector('#send-coffee')
+sendcoffee.addEventListener('click', addnewcoffe);
+sendcoffee.addEventListener('click', updateCoffees);
+console.log(coffees)
 
