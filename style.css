@@ -8,10 +8,14 @@ td, th {
     padding: 5px 10px;
 }
 .color{
-    background-color: saddlebrown;
+    /*background-color: #ff873c;*/
+    background-image: url("img/coffee.jpg");
+    color: white;
+
 }
 #coffees{
-    background-color: white;
+    background-color: rgba(255, 140, 140, 0.73);
+
 }
 /*coffee.id {
     display:none;*/
@@ -19,12 +23,21 @@ td, th {
 .monster{
     width: 5rem;
 }
-.back-white{
-    background-color: white;
+.header-color{
+    background-color: rgba(208, 116, 116, 0.85);
+    color: black;
+
 }
 
 form{
     color: whitesmoke;
+}
+.hrSize{
+    color: white;
+    height: 2rem;
+}
+.btn-color{
+    color: #1c1a1a;
 }
 /*
 pat to do 3: refactor the code so that each coffee is displayed in a div
