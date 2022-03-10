@@ -8,7 +8,7 @@ td, th {
     padding: 5px 10px;
 }
 .color{
-    background-color: lightcoral;
+    background-color: saddlebrown;
 }
 #coffees{
     background-color: white;
@@ -16,6 +16,16 @@ td, th {
 /*coffee.id {
     display:none;*/
 
+.monster{
+    width: 5rem;
+}
+.back-white{
+    background-color: white;
+}
+
+form{
+    color: whitesmoke;
+}
 /*
 pat to do 3: refactor the code so that each coffee is displayed in a div
            that contains a heading displaying the coffee name, and the type of
